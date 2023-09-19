@@ -15,19 +15,19 @@ $(document).ready(function () {
             <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="${(index + 1) * 0.1}s">
             <div class="blog-item border h-100 p-4">
                 <img class="img-fluid mb-4" src="img/NCERT-1024x576.jpg" alt="" />
-                <a href="" class="h5 lh-base d-inline-block">View All books from ${className}</a>
+                <a href="" class="h5 lh-base d-inline-block">${className}</a>
                 <div class="d-flex text-black-50 mb-2">
                     <div class="pe-3">
-                        <small class="fa fa-eye me-1"></small>
-                        <small>9999 Views</small>
+                        <small class="fa fa-book me-1"></small>
+                        <small>${data[eachClass].length} books</small>
                     </div>
                     <div class="pe-3">
-                        <small class="fa fa-comments me-1"></small>
-                        <small>9999 Comments</small>
+                        <small class="fa fa-language me-1"></small>
+                        <small>English, Hindi</small>
                     </div>
                 </div>
-                <p class="mb-4">${allBooks}</p>
-                <a href="${"/ncert.html/?class=" + eachClass}" class="btn btn-outline-primary px-3">Read More</a>
+                <p class="mb-4" title="${allBooks}">${allBooks.length > 190 ? allBooks.slice(0, 190) + "..." : allBooks}</p>
+                <a href="${"/all-upsc-ncert/ncert.html?class=" + eachClass}" class="btn btn-outline-primary px-3">Read More</a>
             </div>
         </div>
             `);
